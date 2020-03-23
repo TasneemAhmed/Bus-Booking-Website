@@ -1,0 +1,30 @@
+﻿@model BusBookingSystem.Models.Bus
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Edit Information</h2>
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.LabelFor(B => B.id)
+        @Html.TextBoxFor(B => B.id, new { @class = "form-control", type = "number" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(B => B.MBusCapacity)
+        @Html.TextBoxFor(B => B.MBusCapacity, new { @class = "form-control", type = "number" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(B => B.MBusType)
+        @Html.TextBoxFor(B => B.MBusType, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(B => B.MLicensePlateNo)
+        @Html.TextBoxFor(B => B.MLicensePlateNo, new { @class = "form-control" })
+    </div>
+    <button type="submit" class="btn btn-primary">Save Edited Information</button>
+
+
+}
