@@ -186,9 +186,14 @@
     <Compile Include="Migrations\202003221535536_EditId.Designer.cs">
       <DependentUpon>202003221535536_EditId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003241437556_businitial.cs" />
+    <Compile Include="Migrations\202003241437556_businitial.Designer.cs">
+      <DependentUpon>202003241437556_businitial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\Bus.cs" />
     <Compile Include="Models\Driver.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -284,6 +289,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003221535536_EditId.resx">
       <DependentUpon>202003221535536_EditId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003241437556_businitial.resx">
+      <DependentUpon>202003241437556_businitial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
