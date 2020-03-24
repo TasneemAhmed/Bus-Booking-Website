@@ -26,7 +26,7 @@ namespace BusBookingSystem.Models
         public int MBusCapacity { get; set; }
         [Required(ErrorMessage = "this field is required")]
         [Display(Name = "Bus Type")]
-        [Range(3, 5)]
+      
         public string MBusType { get; set; }
         public Driver Driverid { get; set; }
     }
