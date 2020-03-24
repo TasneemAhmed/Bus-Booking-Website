@@ -22,6 +22,7 @@ namespace BusBookingSystem.Models
     {
         public DbSet<Driver> Drivers { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Trip> Trips { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
