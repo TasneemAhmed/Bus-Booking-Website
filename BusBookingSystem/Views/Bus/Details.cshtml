@@ -1,0 +1,56 @@
+﻿@model IEnumerable<BusBookingSystem.Models.Bus>
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MLicensePlateNo)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.MBusCapacity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MBusType)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayNameFor(model => model.id)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MLicensePlateNo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MBusCapacity)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MBusType)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+
+        @Html.ActionLink("Delete", "Delete", new { id = item.id })
+    </td>
+</tr>
+}
+
+</table>
+<p>
+    @Html.ActionLink("Back", "Back")
+</p>
