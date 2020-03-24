@@ -220,3 +220,6 @@ D:\Level_3\2nd_term\SW-2\GitHub_Projects\Bus-Booking-Website\BusBookingSystem\ob
 D:\Level_3\2nd_term\SW-2\GitHub_Projects\Bus-Booking-Website\BusBookingSystem\obj\Debug\BusBookingSystem.csproj.CopyComplete
 D:\Level_3\2nd_term\SW-2\GitHub_Projects\Bus-Booking-Website\BusBookingSystem\obj\Debug\BusBookingSystem.dll
 D:\Level_3\2nd_term\SW-2\GitHub_Projects\Bus-Booking-Website\BusBookingSystem\obj\Debug\BusBookingSystem.pdb
+D:\Level_3\2nd_term\SW-2\GitHub_Projects\Bus-Booking-Website\BusBookingSystem\obj\Debug\BusBookingSystem.Migrations.AddLocationToPersonInsteadOfAddress.resources
+D:\Level_3\2nd_term\SW-2\GitHub_Projects\Bus-Booking-Website\BusBookingSystem\obj\Debug\BusBookingSystem.Migrations.AddLocationToPersonInsteadOfAddress1.resources
+D:\Level_3\2nd_term\SW-2\GitHub_Projects\Bus-Booking-Website\BusBookingSystem\obj\Debug\BusBookingSystem.Migrations.RemoveAddressFromDriversTable.resources

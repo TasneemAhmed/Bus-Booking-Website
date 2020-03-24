@@ -109,7 +109,7 @@ namespace BusBookingSystem.Controllers
             driverFromDB.Salary = driver.Salary;
             driverFromDB.UserName = driver.UserName;
             driverFromDB.Gender = driver.Gender;
-            driverFromDB.Address = driver.Address;
+            driverFromDB.Location = driver.Location;
             driverFromDB.Age = driver.Age;
             driverFromDB.EMail = driver.EMail;
             
