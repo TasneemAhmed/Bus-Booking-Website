@@ -12,13 +12,27 @@ namespace BusBookingSystem.Controllers
         ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Driver
-       
-        public ActionResult Index()
+        //the first parameter is the option that we choose and the second parameter will use the textbox value  
+        public ActionResult List(string searchBy, string search)
         {
+            if (searchBy == "Name")
+            {//searchBy == "Name"
+                return View(db.Drivers.Where(x => x.UserName.StartsWith(search) || search == null).ToList());
+            }
+            else if (searchBy == "Email")
+            {//searchBy == "Email"
+                return View(db.Drivers.Where(x => x.EMail.StartsWith(search) || search == null).ToList());
+            }
+
+            else
+            {//searchBy == "Address"
+                return View(db.Drivers.Where(x => x.Address.StartsWith(search) || search == null).ToList());
+            }
+            //this for list of all drivers.
             var drivers = getDrivers();
             return View(drivers);
         }
-               
+
         public IEnumerable<Driver> getDrivers()
         {
             //this var drivers is dbset in db , that get all drivers in db.
@@ -66,7 +80,7 @@ namespace BusBookingSystem.Controllers
          
                 db.Drivers.Add(createNewDriver); //it's only added in memory.
                 db.SaveChanges(); //it's added persitent in database.
-                return RedirectToAction("Index"); //after saveing data back to Index(list of drivers). 
+                return RedirectToAction("List"); //after saveing data back to Index(list of drivers). 
         }
 
         //An Edit link sends HttpGet request to the Edit action method of DriverController with corresponding PersonId in the query string.
@@ -114,7 +128,7 @@ namespace BusBookingSystem.Controllers
             driverFromDB.EMail = driver.EMail;
             
             db.SaveChanges(); //it's added persitent in database.
-            return RedirectToAction("Index", "driver");
+            return RedirectToAction("List", "driver");
 
         }
 
@@ -125,7 +139,7 @@ namespace BusBookingSystem.Controllers
             db.Drivers.Remove(driver);
             db.SaveChanges();
 
-            return RedirectToAction("Index");
+            return RedirectToAction("List");
         }
 
 

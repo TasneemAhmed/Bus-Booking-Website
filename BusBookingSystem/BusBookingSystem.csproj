@@ -265,7 +265,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Driver\Index.cshtml" />
+    <Content Include="Views\Driver\List.cshtml" />
     <Content Include="Views\Driver\Details.cshtml" />
     <Content Include="Views\Driver\Edit.cshtml" />
     <Content Include="Views\Driver\Add.cshtml" />
