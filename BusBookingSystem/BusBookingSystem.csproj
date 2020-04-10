@@ -171,6 +171,7 @@
     <Compile Include="Controllers\DriverController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -197,6 +198,10 @@
     <Compile Include="Migrations\202004102101316_ConvertFromLocationToAddress.cs" />
     <Compile Include="Migrations\202004102101316_ConvertFromLocationToAddress.Designer.cs">
       <DependentUpon>202004102101316_ConvertFromLocationToAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004102215149_AddNewUser.cs" />
+    <Compile Include="Migrations\202004102215149_AddNewUser.Designer.cs">
+      <DependentUpon>202004102215149_AddNewUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -269,6 +274,8 @@
     <Content Include="Views\Driver\Details.cshtml" />
     <Content Include="Views\Driver\Edit.cshtml" />
     <Content Include="Views\Driver\Add.cshtml" />
+    <Content Include="Views\User\List.cshtml" />
+    <Content Include="Views\User\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -305,6 +312,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004102101316_ConvertFromLocationToAddress.resx">
       <DependentUpon>202004102101316_ConvertFromLocationToAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004102215149_AddNewUser.resx">
+      <DependentUpon>202004102215149_AddNewUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

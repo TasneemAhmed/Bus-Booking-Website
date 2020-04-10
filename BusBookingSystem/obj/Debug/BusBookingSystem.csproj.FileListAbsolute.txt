@@ -224,3 +224,4 @@ D:\Level_3\2nd_term\SW-2\GitHub_Projects\Bus-Booking-Website\BusBookingSystem\ob
 D:\Level_3\2nd_term\SW-2\GitHub_Projects\Bus-Booking-Website\BusBookingSystem\obj\Debug\BusBookingSystem.Migrations.AddLocationToPersonInsteadOfAddress1.resources
 D:\Level_3\2nd_term\SW-2\GitHub_Projects\Bus-Booking-Website\BusBookingSystem\obj\Debug\BusBookingSystem.csproj.CoreCompileInputs.cache
 D:\Level_3\2nd_term\SW-2\GitHub_Projects\Bus-Booking-Website\BusBookingSystem\obj\Debug\BusBookingSystem.Migrations.ConvertFromLocationToAddress.resources
+D:\Level_3\2nd_term\SW-2\GitHub_Projects\Bus-Booking-Website\BusBookingSystem\obj\Debug\BusBookingSystem.Migrations.AddNewUser.resources
