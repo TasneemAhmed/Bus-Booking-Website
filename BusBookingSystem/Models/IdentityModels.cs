@@ -21,13 +21,7 @@ namespace BusBookingSystem.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Driver> Drivers { get; set; }
-<<<<<<< HEAD
         public DbSet<User> Users { get; set; }
-        public DbSet<Trip> Trips { get; set; }
-=======
-        public DbSet<User> User { get; set; }
-        public DbSet<Bus> Buses { get; set; }
->>>>>>> 81f76ef008335813dec71ae0d073d467784ad218
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

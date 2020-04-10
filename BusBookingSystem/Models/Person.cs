@@ -25,8 +25,8 @@ namespace BusBookingSystem.Models
         [Display(Name = "Phone Number")]
         public long PhoneNumber { get; set; } //-18,446,744,,073,709,551,615 to 0 & 0 to 18,446,744,,073,709,551,615
 
-        [Required(ErrorMessage = "You have enter Location")]
-        [Display(Name = "Location")]
-        public string Location { get; set; }
+        [Required(ErrorMessage = "You have enter Address")]
+        [Display(Name = "Address")]
+        public string Address { get; set; }
     }
 }
