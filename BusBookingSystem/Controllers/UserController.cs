@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace BusBookingSystem.Controllers
 {
+    [Authorize(Roles = "Admin")] //Admin who only can show list of user , details and delete user.
     public class UserController : Controller
     {
         // GET: User

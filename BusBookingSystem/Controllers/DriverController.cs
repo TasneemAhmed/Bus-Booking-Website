@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace BusBookingSystem.Controllers
 {
+    [Authorize(Roles = "Admin")] //Admin who only can show list of drivers , details, edit, add and delete driver.
     public class DriverController : Controller
     {
         ApplicationDbContext db = new ApplicationDbContext();
