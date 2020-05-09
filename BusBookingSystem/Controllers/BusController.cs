@@ -81,5 +81,35 @@ namespace BusBookingSystem.Controllers
 
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public ActionResult Delete(int id)
+
+        {
+            var buses = db.Bus.Single(B => B.id ==id);
+            db.Bus.Remove(buses);
+            db.SaveChanges();
+
+
+            return RedirectToAction("Index");
+        }
+        public ActionResult Details(int id)
+        {
+            BusDriver BD = new BusDriver();
+            BD.Bus = db.Bus.SingleOrDefault(B => B.id == id);
+          
+
+
+
+            return View(BD);
+        }
+        [HttpGet]
+        public ActionResult Back()
+        {
+
+
+
+
+            return RedirectToAction("Index");
+        }
     }
 }

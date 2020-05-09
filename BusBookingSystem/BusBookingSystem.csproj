@@ -287,6 +287,7 @@
     <Content Include="Views\Bus\Index.cshtml" />
     <Content Include="Views\Bus\New.cshtml" />
     <Content Include="Views\Bus\Edit.cshtml" />
+    <Content Include="Views\Bus\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
