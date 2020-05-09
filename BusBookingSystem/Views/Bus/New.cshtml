@@ -1,0 +1,39 @@
+﻿@model BusBookingSystem.ViewModels.BusDriver
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>New Bus</h2>
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.LabelFor(B => B.Bus.MLicensePlateNo)
+        @Html.TextBoxFor(B => B.Bus.MLicensePlateNo, new { @class = "form-control", type = "number" })
+        @Html.ValidationMessageFor(B => B.Bus.MLicensePlateNo)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(B => B.Bus.MBusCapacity)
+        @Html.TextBoxFor(B => B.Bus.MBusCapacity, new { @class = "form-control", type = "number" })
+        @Html.ValidationMessageFor(B => B.Bus.MBusCapacity)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(B => B.Bus.MBusType)
+        @Html.TextBoxFor(B => B.Bus.MBusType, new { @class = "form-control" })
+        @Html.ValidationMessageFor(B => B.Bus.MBusType)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(B => B.Bus.Did)
+        @Html.TextBoxFor(B => B.Bus.Did, new { @class = "form-control" })
+        @Html.ValidationMessageFor(B => B.Bus.Did)
+    </div>
+   
+
+
+
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-primary">Save Information</button>
+
+
+}
