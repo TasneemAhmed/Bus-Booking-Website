@@ -170,6 +170,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BusController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\DriverController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -209,11 +210,16 @@
     <Compile Include="Migrations\202005081432078_Bus.designer.cs">
       <DependentUpon>202005081432078_Bus.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005140233331_Feedback.cs" />
+    <Compile Include="Migrations\202005140233331_Feedback.designer.cs">
+      <DependentUpon>202005140233331_Feedback.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Bus.cs" />
     <Compile Include="Models\Driver.cs" />
+    <Compile Include="Models\Feedback.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Person.cs" />
@@ -288,6 +294,7 @@
     <Content Include="Views\Bus\New.cshtml" />
     <Content Include="Views\Bus\Edit.cshtml" />
     <Content Include="Views\Bus\Details.cshtml" />
+    <Content Include="Views\Contact\Feedback.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -330,6 +337,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005081432078_Bus.resx">
       <DependentUpon>202005081432078_Bus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005140233331_Feedback.resx">
+      <DependentUpon>202005140233331_Feedback.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
