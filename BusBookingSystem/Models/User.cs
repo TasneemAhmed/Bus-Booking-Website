@@ -10,6 +10,8 @@ namespace BusBookingSystem.Models
     {
         [Required(ErrorMessage = "You have enter a Password")]
         [Display(Name = "Password")]
+        [DataType(DataType.Password)]
         public string UserPassword { get; set; }
+      
     }
 }

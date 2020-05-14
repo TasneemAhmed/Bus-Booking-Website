@@ -9,7 +9,8 @@ namespace BusBookingSystem.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(BusBookingSystem.Models.ApplicationDbContext context)

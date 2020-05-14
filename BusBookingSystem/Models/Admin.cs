@@ -9,5 +9,6 @@ namespace BusBookingSystem.Models
     {
         private string AdminUsername { get; set; }
         private string AdminPassword { get; set; }
+       
     }
 }

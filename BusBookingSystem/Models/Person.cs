@@ -15,6 +15,7 @@ namespace BusBookingSystem.Models
 
         [Required(ErrorMessage = "You have enter an Email")]
         [Display(Name = "Email")]
+        [DataType(DataType.EmailAddress)]
         public string EMail { get; set; }
 
         [Required(ErrorMessage = "You have enter  User Name")]
@@ -28,5 +29,6 @@ namespace BusBookingSystem.Models
         [Required(ErrorMessage = "You have enter Address")]
         [Display(Name = "Address")]
         public string Address { get; set; }
+        
     }
 }
