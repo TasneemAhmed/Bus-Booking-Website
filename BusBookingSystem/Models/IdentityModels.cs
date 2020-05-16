@@ -24,6 +24,8 @@ namespace BusBookingSystem.Models
         public DbSet<User> Users { get; set; }
         public DbSet<Bus> Bus { get; set; }
         public DbSet<Feedback> feedback { get; set; }
+
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
