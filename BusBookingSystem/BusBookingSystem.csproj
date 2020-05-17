@@ -52,6 +52,7 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Build.Utilities.v4.0" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -209,6 +210,30 @@
     <Compile Include="Migrations\202005081432078_Bus.designer.cs">
       <DependentUpon>202005081432078_Bus.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005092139027_feedback.cs" />
+    <Compile Include="Migrations\202005092139027_feedback.designer.cs">
+      <DependentUpon>202005092139027_feedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005092328169_feedback1.cs" />
+    <Compile Include="Migrations\202005092328169_feedback1.designer.cs">
+      <DependentUpon>202005092328169_feedback1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005110208492_dd.cs" />
+    <Compile Include="Migrations\202005110208492_dd.designer.cs">
+      <DependentUpon>202005110208492_dd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005131837054_updatefeedback.cs" />
+    <Compile Include="Migrations\202005131837054_updatefeedback.designer.cs">
+      <DependentUpon>202005131837054_updatefeedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005131936198_validatefeedback.cs" />
+    <Compile Include="Migrations\202005131936198_validatefeedback.designer.cs">
+      <DependentUpon>202005131936198_validatefeedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005171841063_deletefeedback.cs" />
+    <Compile Include="Migrations\202005171841063_deletefeedback.designer.cs">
+      <DependentUpon>202005171841063_deletefeedback.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -330,6 +355,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005081432078_Bus.resx">
       <DependentUpon>202005081432078_Bus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005092139027_feedback.resx">
+      <DependentUpon>202005092139027_feedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005092328169_feedback1.resx">
+      <DependentUpon>202005092328169_feedback1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005110208492_dd.resx">
+      <DependentUpon>202005110208492_dd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005131837054_updatefeedback.resx">
+      <DependentUpon>202005131837054_updatefeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005131936198_validatefeedback.resx">
+      <DependentUpon>202005131936198_validatefeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005171841063_deletefeedback.resx">
+      <DependentUpon>202005171841063_deletefeedback.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -9,37 +9,45 @@
 <p>
     @Html.ActionLink("Create New", "New")
 </p>
+
+
+
+
+
+
+
 <table class="table table-striped table-bordered table-hover">
+
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Buses)
+            @Html.DisplayNameFor(model => model.Bus.MLicensePlateNo)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Drivers)
+            @Html.DisplayNameFor(model => model.Bus.Did)
         </th>
 
     </tr>
 
     @foreach (var item in Model.Buses)
     {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.MLicensePlateNo)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Did)
-    </td>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MLicensePlateNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Did)
+            </td>
 
 
-    <td>
+            <td>
 
-        @Html.ActionLink("Details", "Details", new { id = item.id }) |
-        @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.id })
 
 
-    </td>
-</tr>
+            </td>
+        </tr>
     }
 
 </table>

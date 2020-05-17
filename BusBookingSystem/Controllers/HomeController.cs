@@ -4,6 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+using System.Web.UI.WebControls;
+using BusBookingSystem.Models;
+using System.Text;
+
+using System.Net;
+using System.Net.Mail;
+
+
 namespace BusBookingSystem.Controllers
 {
     public class HomeController : Controller
@@ -26,5 +34,15 @@ namespace BusBookingSystem.Controllers
 
             return View();
         }
+        [HttpGet]
+        public ActionResult Feedback()
+        {
+
+
+            return View();
+        }
+     
+        
+
     }
 }

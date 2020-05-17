@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.WebPages;
 using BusBookingSystem.Models;
 using BusBookingSystem.ViewModels;
 using Microsoft.Ajax.Utilities;
@@ -10,20 +11,22 @@ using Microsoft.Ajax.Utilities;
 namespace BusBookingSystem.Controllers
 {
     public class BusController : Controller
-    { ApplicationDbContext db = new ApplicationDbContext();
-       public ActionResult Index()
+    {
+        ApplicationDbContext db = new ApplicationDbContext();
+        public ActionResult Index()
         {
             var Driverid = db.Drivers.ToList();
             var Bus = db.Bus.ToList();
             BusDriver BD = new BusDriver
             {
-                Buses=Bus,
+                Buses = Bus,
                 Drivers = Driverid
 
-     
-             };
+
+            };
             return View(BD);
         }
+        [HttpGet]
         public ActionResult New()
         {
 
@@ -32,25 +35,32 @@ namespace BusBookingSystem.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult New(Bus Buses)
+        public ActionResult New(BusDriver Buses)
         {
-            if (!ModelState.IsValid)
-            {
+            
+                if (!ModelState.IsValid)
+                {
+                   
+                return View(Buses);
 
-                return View("New");
             }
+                else
+                {
+                
+                 db.Bus.Add(Buses.Bus);
+                db.SaveChanges();
 
-            db.Bus.Add(Buses);
-            db.SaveChanges();
-
-            return RedirectToAction("Index");
+                return RedirectToAction("Index");
+            }
+           
+           
         }
         [HttpGet]
         public ActionResult Edit(int id)
         {
-          
-           
-           
+
+
+
             BusDriver BD = new BusDriver();
             BD.Bus = db.Bus.Single(B => B.id == id);
 
@@ -68,8 +78,8 @@ namespace BusBookingSystem.Controllers
                 return View("Edit", BD);
             }
 
-           
-            var Dbus = db.Bus.Single(B => B.id ==  BD.Bus.id);
+
+            var Dbus = db.Bus.Single(B => B.id == BD.Bus.id);
 
             Dbus.MBusCapacity = BD.Bus.MBusCapacity;
             Dbus.MBusType = BD.Bus.MBusType;
@@ -81,11 +91,14 @@ namespace BusBookingSystem.Controllers
 
             return RedirectToAction("Index");
         }
+      
+
+           
         [HttpGet]
         public ActionResult Delete(int id)
 
         {
-            var buses = db.Bus.Single(B => B.id ==id);
+            var buses = db.Bus.Single(B => B.id == id);
             db.Bus.Remove(buses);
             db.SaveChanges();
 
@@ -96,7 +109,7 @@ namespace BusBookingSystem.Controllers
         {
             BusDriver BD = new BusDriver();
             BD.Bus = db.Bus.SingleOrDefault(B => B.id == id);
-          
+
 
 
 
@@ -111,5 +124,15 @@ namespace BusBookingSystem.Controllers
 
             return RedirectToAction("Index");
         }
+     
+
+
+
+
+
+
+
+
+
     }
 }
