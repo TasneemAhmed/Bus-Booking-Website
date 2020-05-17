@@ -1,0 +1,31 @@
+﻿@model BusBookingSystem.Models.Feedback
+@{
+    ViewBag.Title = "Home Page";
+}
+@Scripts.Render("~/bundles/jquery")
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Feedback</h2>
+<fieldset>
+    @using (Html.BeginForm())
+    {
+        <legend>
+            Have feedback? We'd love to hear it
+            '
+        </legend>
+        <p>Name*: </p>
+        <p>@Html.TextBoxFor(m => m.name)</p>
+        @Html.ValidationMessageFor(B => B.name)
+        <p>Email*: </p>
+        <p>@Html.TextBoxFor(m => m.EMail)</p>
+        @Html.ValidationMessageFor(B => B.EMail)
+        <p>Message*: </p>
+        <p>@Html.TextAreaFor(m => m.text)</p>
+        @Html.ValidationMessageFor(B => B.text)
+        <p>Type of your message </p>
+        <p>@Html.TextBoxFor(m => m.Subject)</p>
+        @Html.ValidationMessageFor(B => B.Subject)
+        <input type="submit" value="SEND" />
+    }
+</fieldset>
