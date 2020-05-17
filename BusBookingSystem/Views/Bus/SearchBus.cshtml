@@ -1,0 +1,64 @@
+﻿
+@model BusBookingSystem.ViewModels.BusDriver
+
+@{
+    ViewBag.Title = "SearchBus";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+
+<p>
+    @Html.ActionLink("Back", "Back")
+</p>
+<table class="table table-striped table-bordered table-hover">
+
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Bus.MLicensePlateNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bus.MBusCapacity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bus.MBusType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bus.Did)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+
+
+
+
+    <tr>
+        <td>
+            @Html.DisplayFor(model => model.Bus.MLicensePlateNo)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.Bus.MBusCapacity)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.Bus.MBusType)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.Bus.Did)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Bus.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = Model.Bus.id })
+        </td>
+
+    </tr>
+
+
+
+
+</table>
+

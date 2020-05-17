@@ -124,7 +124,16 @@ namespace BusBookingSystem.Controllers
 
             return RedirectToAction("Index");
         }
-     
+        public ActionResult SearchBus(string MLicensePlateNo)
+        {
+
+            BusDriver BD = new BusDriver();
+            BD.Bus = db.Bus.SingleOrDefault(s => s.MLicensePlateNo.Contains(MLicensePlateNo));
+
+
+            return View(BD);
+
+        }
 
 
 

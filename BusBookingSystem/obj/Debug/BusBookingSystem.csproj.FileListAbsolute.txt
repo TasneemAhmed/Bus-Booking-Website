@@ -342,9 +342,4 @@ C:\Users\hp\Source\Repos\TasneemAhmed\Bus-Booking-Website\BusBookingSystem\obj\D
 C:\Users\hp\Source\Repos\TasneemAhmed\Bus-Booking-Website\BusBookingSystem\obj\Debug\BusBookingSystem.dll
 C:\Users\hp\Source\Repos\TasneemAhmed\Bus-Booking-Website\BusBookingSystem\obj\Debug\BusBookingSystem.pdb
 C:\Users\hp\Source\Repos\TasneemAhmed\Bus-Booking-Website\BusBookingSystem\obj\Debug\BusBookingSystem.Migrations.Bus.resources
-C:\Users\hp\Source\Repos\TasneemAhmed\Bus-Booking-Website\BusBookingSystem\obj\Debug\BusBookingSystem.Migrations.feedback.resources
-C:\Users\hp\Source\Repos\TasneemAhmed\Bus-Booking-Website\BusBookingSystem\obj\Debug\BusBookingSystem.Migrations.feedback1.resources
 C:\Users\hp\source\repos\TasneemAhmed\Bus-Booking-Website\BusBookingSystem\obj\Debug\BusBookingSystem.Migrations.dd.resources
-C:\Users\hp\source\repos\TasneemAhmed\Bus-Booking-Website\BusBookingSystem\obj\Debug\BusBookingSystem.Migrations.updatefeedback.resources
-C:\Users\hp\source\repos\TasneemAhmed\Bus-Booking-Website\BusBookingSystem\obj\Debug\BusBookingSystem.Migrations.validatefeedback.resources
-C:\Users\hp\source\repos\TasneemAhmed\Bus-Booking-Website\BusBookingSystem\obj\Debug\BusBookingSystem.Migrations.deletefeedback.resources
