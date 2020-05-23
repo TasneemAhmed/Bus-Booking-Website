@@ -1,10 +1,6 @@
 ﻿@model BusBookingSystem.Models.Feedback
 @{
-    ViewBag.Title = "Home Page";
-}
-@Scripts.Render("~/bundles/jquery")
-@{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Feedback";
 }
 <h2>Feedback</h2>
 <fieldset>
@@ -12,7 +8,6 @@
     {
         <legend>
             Have feedback? We'd love to hear it
-            '
         </legend>
         <p>Name*: </p>
         <p>@Html.TextBoxFor(m => m.name)</p>

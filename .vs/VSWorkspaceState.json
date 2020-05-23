@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\BusBookingSystem"
+    "\\BusBookingSystem",
+    "\\BusBookingSystem\\Views",
+    "\\BusBookingSystem\\Views\\Home"
   ],
-  "SelectedNode": "\\BusBookingSystem",
+  "SelectedNode": "\\BusBookingSystem\\Views\\Home\\About.cshtml",
   "PreviewInSolutionExplorer": false
 }

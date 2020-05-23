@@ -30,6 +30,8 @@ namespace BusBookingSystem.Controllers
                 return View(db.Drivers.Where(x => x.Address.StartsWith(search) || search == null).ToList());
             }
             //this for list of all drivers.
+
+
             var drivers = getDrivers();
             return View(drivers);
         }

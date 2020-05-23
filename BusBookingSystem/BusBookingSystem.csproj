@@ -207,10 +207,15 @@
     <Compile Include="Migrations\202004151510272_UserStateAdded.Designer.cs">
       <DependentUpon>202004151510272_UserStateAdded.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005170308598_addfeedback.cs" />
+    <Compile Include="Migrations\202005170308598_addfeedback.Designer.cs">
+      <DependentUpon>202005170308598_addfeedback.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Driver.cs" />
+    <Compile Include="Models\Feedback.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Person.cs" />
@@ -280,6 +285,7 @@
     <Content Include="Views\Driver\Add.cshtml" />
     <Content Include="Views\User\List.cshtml" />
     <Content Include="Views\User\Details.cshtml" />
+    <Content Include="Views\Home\Feedback.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -322,6 +328,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004151510272_UserStateAdded.resx">
       <DependentUpon>202004151510272_UserStateAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005170308598_addfeedback.resx">
+      <DependentUpon>202005170308598_addfeedback.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
