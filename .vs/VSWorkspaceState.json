@@ -2,9 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\BusBookingSystem",
+    "\\BusBookingSystem\\App_Data",
+    "\\BusBookingSystem\\App_Start",
+    "\\BusBookingSystem\\Controllers",
+    "\\BusBookingSystem\\Models",
     "\\BusBookingSystem\\Views",
     "\\BusBookingSystem\\Views\\Home"
   ],
-  "SelectedNode": "\\BusBookingSystem\\Views\\Home\\About.cshtml",
+  "SelectedNode": "\\BusBookingSystem\\App_Start",
   "PreviewInSolutionExplorer": false
 }
