@@ -25,6 +25,40 @@ namespace BusBookingSystem.Controllers
             };
             return View(BD);
         }
+
+        [HttpGet]
+        public ActionResult New()
+        {
+
+
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult New(BusDriver Buses)
+        {
+
+            if (!ModelState.IsValid)
+            {
+
+                return View(Buses);
+
+            }
+            else
+            {
+
+                db.Bus.Add(Buses.Bus);
+                db.SaveChanges();
+
+                return RedirectToAction("Index");
+            }
+
+
+        }
+
+
+
+
     }
 
 
