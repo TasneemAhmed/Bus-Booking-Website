@@ -233,6 +233,11 @@
     <Compile Include="ViewModels\BusDriver.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Bus form\css\j-forms.css" />
+    <Content Include="Bus form\css\style.css" />
+    <Content Include="Bus form\index.html" />
+    <Content Include="Bus form\js\jquery.1.11.1.min.js" />
+    <Content Include="Bus form\w3layouts-License.txt" />
     <Content Include="Busbooklayout\css\bootstrap.css" />
     <Content Include="Busbooklayout\css\font-awesome.css" />
     <Content Include="Busbooklayout\css\ihover.css" />
@@ -312,6 +317,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Bus\css\j-forms.css" />
+    <Content Include="Views\Bus\css\style.css" />
+    <Content Include="Views\Bus\js\jquery.1.11.1.min.js" />
     <Content Include="Views\Home\css\bootstrap.css" />
     <Content Include="Views\Home\css\font-awesome.css" />
     <Content Include="Views\Home\css\ihover.css" />

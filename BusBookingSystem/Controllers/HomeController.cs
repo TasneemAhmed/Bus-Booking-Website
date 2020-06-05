@@ -34,15 +34,9 @@ namespace BusBookingSystem.Controllers
 
             return View();
         }
-        [HttpGet]
-        public ActionResult Feedback()
-        {
-
-
-            return View();
-        }
+      
         [HttpPost]
-        public ActionResult Feedback(Feedback fb)
+        public ActionResult Index(Feedback fb)
         {
             try
             {
