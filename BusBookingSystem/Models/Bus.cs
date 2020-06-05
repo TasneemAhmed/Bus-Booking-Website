@@ -4,12 +4,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
+
 namespace BusBookingSystem.Models
 {
     public class Bus
     {
-        [Required(ErrorMessage = "this field is required")]
-        [Display(Name = "Bus Number")]
+        
 
         public int id { get; set; }
 
@@ -25,7 +26,7 @@ namespace BusBookingSystem.Models
         public int MBusCapacity { get; set; }
         [Required(ErrorMessage = "this field is required")]
         [Display(Name = "Bus Type")]
-        [Range(3, 5)]
+        
         public string MBusType { get; set; }
         public virtual Driver Driverid { get; set; }
         [ForeignKey("Driverid")]

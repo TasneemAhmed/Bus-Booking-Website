@@ -1,14 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\BusBookingSystem",
-    "\\BusBookingSystem\\App_Data",
-    "\\BusBookingSystem\\App_Start",
-    "\\BusBookingSystem\\Controllers",
-    "\\BusBookingSystem\\Models",
-    "\\BusBookingSystem\\Views",
-    "\\BusBookingSystem\\Views\\Home"
+    ""
   ],
-  "SelectedNode": "\\BusBookingSystem\\App_Start",
+  "SelectedNode": "\\BusBookingSystem.sln",
   "PreviewInSolutionExplorer": false
 }
