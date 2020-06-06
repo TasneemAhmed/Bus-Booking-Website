@@ -354,6 +354,8 @@
     <Content Include="Views\Home\images\t3.jpg" />
     <Content Include="Views\Home\images\t4.jpg" />
     <Content Include="Views\Home\images\video.jpg" />
+    <Content Include="Views\Bus\Edit.cshtml" />
+    <Content Include="Views\Bus\Details.cshtml" />
     <None Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\js\bars.js" />
     <Content Include="Views\Home\js\bootstrap.js" />

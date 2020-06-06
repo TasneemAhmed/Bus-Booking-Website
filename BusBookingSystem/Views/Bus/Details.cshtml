@@ -1,0 +1,28 @@
+﻿@model BusBookingSystem.ViewModels.BusDriver
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<p>
+    @Html.ActionLink("Back", "Back")
+</p>
+<h2>Bus Details</h2>
+<ul>
+    <li>LicensePlateNumber : @Model.Bus.MLicensePlateNo</li>
+    <li>DriverID : @Model.Bus.Did</li>
+    <li>BusCapacity : @Model.Bus.MBusCapacity</li>
+    <li>BusType : @Model.Bus.MBusType</li>
+
+</ul>
+
+<td>
+    <a @Html.ActionLink("Edit", "Edit", new { id = Model.Bus.id })> <i class="glyphicon   glyphicon-edit"></i></a>
+</td>
+
+
+
+

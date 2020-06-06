@@ -55,6 +55,60 @@ namespace BusBookingSystem.Controllers
 
 
         }
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+
+
+
+            BusDriver BD = new BusDriver();
+            BD.Bus = db.Bus.Single(B => B.id == id);
+
+
+
+            return View(BD);
+        }
+        [ValidateAntiForgeryToken]
+        [HttpPost]
+        public ActionResult Edit(BusDriver BD)
+        {
+            if (!ModelState.IsValid)
+            {
+
+                return View("Edit", BD);
+            }
+
+
+            var Dbus = db.Bus.Single(B => B.id == BD.Bus.id);
+
+            Dbus.MBusCapacity = BD.Bus.MBusCapacity;
+            Dbus.MBusType = BD.Bus.MBusType;
+            Dbus.MLicensePlateNo = BD.Bus.MLicensePlateNo;
+            Dbus.Did = BD.Bus.Did;
+            db.SaveChanges();
+
+
+
+            return RedirectToAction("Index");
+        }
+
+
+
+        public ActionResult Details(int id)
+        {
+            BusDriver BD = new BusDriver();
+            BD.Bus = db.Bus.SingleOrDefault(B => B.id == id);
+
+
+
+
+            return View(BD);
+        }
+
+
+
+
+
 
 
 
