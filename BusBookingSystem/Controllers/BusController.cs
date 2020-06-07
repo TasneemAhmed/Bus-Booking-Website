@@ -104,6 +104,37 @@ namespace BusBookingSystem.Controllers
 
             return View(BD);
         }
+        [HttpGet]
+        public ActionResult Back()
+        {
+
+
+
+
+            return RedirectToAction("Index");
+        }
+        public ActionResult SearchBus(string MLicensePlateNo)
+        {
+
+            BusDriver BD = new BusDriver();
+            BD.Bus = db.Bus.SingleOrDefault(s => s.MLicensePlateNo.Contains(MLicensePlateNo));
+
+
+            return View(BD);
+
+        }
+        [HttpGet]
+        public ActionResult Delete(int id)
+
+        {
+            var buses = db.Bus.Single(B => B.id == id);
+            db.Bus.Remove(buses);
+            db.SaveChanges();
+
+
+            return RedirectToAction("Index");
+        }
+       
 
 
 

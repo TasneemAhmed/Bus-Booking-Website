@@ -16,7 +16,7 @@ namespace BusBookingSystem.Models
 
         [Required(ErrorMessage = "this field is required")]
         [Display(Name = "License Plate Number")]
-
+       
         [StringLength(5, ErrorMessage = "you must enter 5 characters")]
         public string MLicensePlateNo { get; set; }
 

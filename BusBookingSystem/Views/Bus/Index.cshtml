@@ -5,10 +5,16 @@
 }
 
 <h2>Bus</h2>
-
 <p>
-    <a @Html.ActionLink("Create New", "New")><i class="glyphicon glyphicon-new-window   ></i>     </a>
+    <a @Html.ActionLink("Create New", "New")><i class="glyphicon glyphicon-new-window"></i>     </a>
 </p>
+@using (Html.BeginForm("SearchBus", "Bus", FormMethod.Get))
+{
+    @Html.TextBox("MLicensePlateNo")
+    <input type="submit" value="search" />
+}
+
+
 
 
 
@@ -39,9 +45,9 @@
 
                 <td>
 
-                    
-                    <a @Html.ActionLink("Edit", "Edit", new { id = item.id })> <i class="glyphicon   glyphicon-edit"></i></a> || 
-                    <a @Html.ActionLink("Details", "Details", new { id = item.id }) > <i class ="glyphicon glyphicon-list"></i> </a> ||
+
+                    <a @Html.ActionLink("Edit", "Edit", new { id = item.id })> <i class="glyphicon   glyphicon-edit"></i></a> ||
+                    <a @Html.ActionLink("Details", "Details", new { id = item.id })> <i class="glyphicon glyphicon-list"></i> </a> ||
                     <a @Html.ActionLink("Delete", "Delete", new { id = item.id })><i class="glyphicon   glyphicon-trash"></i></a>
 
 
@@ -50,4 +56,4 @@
         }
 
     </table>
-    </div>
+</div>

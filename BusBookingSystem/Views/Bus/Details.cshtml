@@ -1,28 +1,61 @@
 ﻿@model BusBookingSystem.ViewModels.BusDriver
-
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
-
-<p>
-    @Html.ActionLink("Back", "Back")
-</p>
 <h2>Bus Details</h2>
-<ul>
-    <li>LicensePlateNumber : @Model.Bus.MLicensePlateNo</li>
-    <li>DriverID : @Model.Bus.Did</li>
-    <li>BusCapacity : @Model.Bus.MBusCapacity</li>
-    <li>BusType : @Model.Bus.MBusType</li>
-
-</ul>
-
-<td>
-    <a @Html.ActionLink("Edit", "Edit", new { id = Model.Bus.id })> <i class="glyphicon   glyphicon-edit"></i></a>
-</td>
 
 
 
 
+
+<div class="container-fluid" style="width:50% ; margin-top:2%">
+    <table class="table table-responsive">
+
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Bus.MLicensePlateNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bus.Did)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bus.MBusCapacity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bus.MBusType)
+            </th>
+
+
+        </tr>
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.Bus.MLicensePlateNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.Bus.Did)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.Bus.MBusCapacity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.Bus.MBusType)
+            </td>
+
+
+            <td>
+
+
+                <a @Html.ActionLink("Edit", "Edit", new { id = Model.Bus.id })> <i class="glyphicon   glyphicon-edit"></i></a> ||
+
+                <a @Html.ActionLink("Delete", "Delete", new { id = Model.Bus.id })><i class="glyphicon   glyphicon-trash"></i></a>
+
+
+            </td>
+        </tr>
+
+
+    </table>
+</div>

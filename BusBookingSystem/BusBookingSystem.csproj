@@ -320,6 +320,13 @@
     <Content Include="Views\Bus\css\j-forms.css" />
     <Content Include="Views\Bus\css\style.css" />
     <Content Include="Views\Bus\js\jquery.1.11.1.min.js" />
+    <Content Include="Views\Bus\search box\css\j-forms.css" />
+    <Content Include="Views\Bus\search box\css\style.css" />
+    <Content Include="Views\Bus\search box\images\5.jpg" />
+    <Content Include="Views\Bus\search box\images\search.png" />
+    <Content Include="Views\Bus\search box\index.html" />
+    <Content Include="Views\Bus\search box\js\jquery.1.11.1.min.js" />
+    <Content Include="Views\Bus\search box\w3layouts-License.txt" />
     <Content Include="Views\Home\css\bootstrap.css" />
     <Content Include="Views\Home\css\font-awesome.css" />
     <Content Include="Views\Home\css\ihover.css" />
@@ -356,6 +363,8 @@
     <Content Include="Views\Home\images\video.jpg" />
     <Content Include="Views\Bus\Edit.cshtml" />
     <Content Include="Views\Bus\Details.cshtml" />
+    <Content Include="Views\Bus\SearchBus.cshtml" />
+    <Content Include="Views\Bus\search box\images\Thumbs.db" />
     <None Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\js\bars.js" />
     <Content Include="Views\Home\js\bootstrap.js" />
