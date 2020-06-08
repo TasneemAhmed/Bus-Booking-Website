@@ -32,5 +32,6 @@ namespace BusBookingSystem.Models
         [ForeignKey("Driverid")]
         public int? Did { get; set; }
 
+        public virtual Trip Trip { get; set; }
     }
 }
