@@ -697,3 +697,5 @@ D:\FCI\Level 3\2nd Term\Software Engineering 2\attempt 5\Bus-Booking-Website\Bus
 D:\FCI\Level 3\2nd Term\Software Engineering 2\attempt 5\Bus-Booking-Website\BusBookingSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\FCI\Level 3\2nd Term\Software Engineering 2\attempt 5\Bus-Booking-Website\BusBookingSystem\obj\Debug\BusBookingSystem.csproj.CopyComplete
 D:\FCI\Level 3\2nd Term\Software Engineering 2\attempt 5\Bus-Booking-Website\BusBookingSystem\obj\Debug\BusBookingSystem.Migrations.TripmoduleanditsrelationwithBusmodule.resources
+C:\Users\new tech\Desktop\mygit-hub\Bus-Booking-Website\BusBookingSystem\obj\Debug\BusBookingSystem.Migrations.buses.resources
+C:\Users\new tech\Desktop\mygit-hub\Bus-Booking-Website\BusBookingSystem\obj\Debug\BusBookingSystem.Migrations.TripmoduleanditsrelationwithBusmodule.resources
