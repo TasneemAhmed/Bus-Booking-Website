@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<BusBookingSystem.Models.Trip>
 
 @{
-    ViewBag.Title = "Maintain Trips";
+    ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -17,13 +17,16 @@
         @Html.RadioButton("searchBy", "Price") <text>Price</text>
         @Html.RadioButton("searchBy", "Time") <text>Time</text>
         @Html.RadioButton("searchBy", "Date") <text>Date</text>
-        @Html.RadioButton("searchBy", "BusLicensePlate") <text>Bus License Plate</text><br />
+        @Html.RadioButton("searchBy", "License Plate Number") <text>Bus License Plate</text><br />
         @Html.TextBox("search") <input type="submit" value="search" class="btn btn-default" />
     }
 
 </p>
 <table class="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.licensePlateNo)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.tripStart)
         </th>
@@ -44,6 +47,9 @@
 
 @foreach (var item in Model) {
     <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.licensePlateNo)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.tripStart)
         </td>

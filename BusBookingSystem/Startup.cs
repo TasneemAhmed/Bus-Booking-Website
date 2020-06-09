@@ -13,10 +13,10 @@ namespace BusBookingSystem
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
-            CreateRoles();
-            CreateUsers();
+            //CreateRoles();
+            //CreateUsers();
         }
-        public void CreateUsers()
+        /*public void CreateUsers()
         {
             var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
             var user = new ApplicationUser();
@@ -50,6 +50,6 @@ namespace BusBookingSystem
                 role.Name = "Driver";
                 roleManager.Create(role);
             }
-        }
+        }*/
     }
 }

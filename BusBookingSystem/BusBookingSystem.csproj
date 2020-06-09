@@ -223,6 +223,22 @@
     <Compile Include="Migrations\202006080740116_Trip module and its relation with Bus module.Designer.cs">
       <DependentUpon>202006080740116_Trip module and its relation with Bus module.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006090650308_Relation between Trip module and Bus module v2.cs" />
+    <Compile Include="Migrations\202006090650308_Relation between Trip module and Bus module v2.Designer.cs">
+      <DependentUpon>202006090650308_Relation between Trip module and Bus module v2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006092028102_Bus and Trip relation.cs" />
+    <Compile Include="Migrations\202006092028102_Bus and Trip relation.Designer.cs">
+      <DependentUpon>202006092028102_Bus and Trip relation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006092041148_Bus licenase plate in Trip.cs" />
+    <Compile Include="Migrations\202006092041148_Bus licenase plate in Trip.Designer.cs">
+      <DependentUpon>202006092041148_Bus licenase plate in Trip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006092115456_Bus and Trip relation update.cs" />
+    <Compile Include="Migrations\202006092115456_Bus and Trip relation update.Designer.cs">
+      <DependentUpon>202006092115456_Bus and Trip relation update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -493,6 +509,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006080740116_Trip module and its relation with Bus module.resx">
       <DependentUpon>202006080740116_Trip module and its relation with Bus module.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006090650308_Relation between Trip module and Bus module v2.resx">
+      <DependentUpon>202006090650308_Relation between Trip module and Bus module v2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006092028102_Bus and Trip relation.resx">
+      <DependentUpon>202006092028102_Bus and Trip relation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006092041148_Bus licenase plate in Trip.resx">
+      <DependentUpon>202006092041148_Bus licenase plate in Trip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006092115456_Bus and Trip relation update.resx">
+      <DependentUpon>202006092115456_Bus and Trip relation update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -10,7 +10,7 @@ namespace BusBookingSystem.Models
     public class Trip
     {
         // this Id refer to ForeignKey  which make relation between Bus and Trip (one to one relationship).
-        [Key, ForeignKey("Bus")]
+        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
@@ -36,5 +36,8 @@ namespace BusBookingSystem.Models
 
         //Navigation property to navigate from Trip to Bus.
         public virtual Bus Bus { get; set; }
+        [Required(ErrorMessage = "You have enter the trip bus license plate number")]
+        [Display(Name = "License Plate Number")]
+        public string licensePlateNo { get; set; }
     }
 }

@@ -697,3 +697,7 @@ D:\FCI\Level 3\2nd Term\Software Engineering 2\attempt 5\Bus-Booking-Website\Bus
 D:\FCI\Level 3\2nd Term\Software Engineering 2\attempt 5\Bus-Booking-Website\BusBookingSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\FCI\Level 3\2nd Term\Software Engineering 2\attempt 5\Bus-Booking-Website\BusBookingSystem\obj\Debug\BusBookingSystem.csproj.CopyComplete
 D:\FCI\Level 3\2nd Term\Software Engineering 2\attempt 5\Bus-Booking-Website\BusBookingSystem\obj\Debug\BusBookingSystem.Migrations.TripmoduleanditsrelationwithBusmodule.resources
+D:\FCI\Level 3\2nd Term\Software Engineering 2\attempt 5\Bus-Booking-Website\BusBookingSystem\obj\Debug\BusBookingSystem.Migrations.RelationbetweenTripmoduleandBusmodulev2.resources
+D:\FCI\Level 3\2nd Term\Software Engineering 2\attempt 5\Bus-Booking-Website\BusBookingSystem\obj\Debug\BusBookingSystem.Migrations.BusandTriprelation.resources
+D:\FCI\Level 3\2nd Term\Software Engineering 2\attempt 5\Bus-Booking-Website\BusBookingSystem\obj\Debug\BusBookingSystem.Migrations.BuslicenaseplateinTrip.resources
+D:\FCI\Level 3\2nd Term\Software Engineering 2\attempt 5\Bus-Booking-Website\BusBookingSystem\obj\Debug\BusBookingSystem.Migrations.BusandTriprelationupdate.resources

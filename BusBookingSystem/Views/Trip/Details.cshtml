@@ -1,4 +1,4 @@
-﻿@model BusBookingSystem.Models.Trip
+﻿@model BusBookingSystem.ViewModels.TripBus
 
 @{
     ViewBag.Title = "Details";
@@ -11,48 +11,55 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.tripStart)
+            @Html.DisplayNameFor(model => model.Trip.tripStart)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.tripStart)
+            @Html.DisplayFor(model => model.Trip.tripStart)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.tripDestination)
+            @Html.DisplayNameFor(model => model.Trip.tripDestination)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.tripDestination)
+            @Html.DisplayFor(model => model.Trip.tripDestination)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.price)
+            @Html.DisplayNameFor(model => model.Trip.price)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.price)
+            @Html.DisplayFor(model => model.Trip.price)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.time)
+            @Html.DisplayNameFor(model => model.Trip.time)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.time)
+            @Html.DisplayFor(model => model.Trip.time)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.date)
+            @Html.DisplayNameFor(model => model.Trip.date)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.date)
+            @Html.DisplayFor(model => model.Trip.date)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.Trip.licensePlateNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Trip.licensePlateNo)
+        </dd>
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Trip.Id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

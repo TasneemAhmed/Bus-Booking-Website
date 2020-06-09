@@ -21,7 +21,7 @@ namespace BusBookingSystem.Controllers
             {
                 return View(db.Trips.Where(x => x.tripStart.StartsWith(search) || search == null).ToList());
             }
-            else if(searchBy == "Destination")
+            else if (searchBy == "Destination")
             {
                 return View(db.Trips.Where(x => x.tripDestination.StartsWith(search) || search == null).ToList());
             }else if (searchBy == "Price")
@@ -31,9 +31,13 @@ namespace BusBookingSystem.Controllers
             }else if (searchBy == "Time")
             {
                 return View(db.Trips.Where(x => x.time.StartsWith(search) || search == null).ToList());
-            }else //searchBy == "Date"
+            }else if (searchBy == "Date")
             {
                 return View(db.Trips.Where(x => x.date.StartsWith(search) || search == null).ToList());
+            }
+            else //if (searchBy == "License Plate Number")
+            {
+                return View(db.Trips.Where(x => x.licensePlateNo.StartsWith(search) || search == null).ToList());
             }
         }
 
@@ -52,33 +56,35 @@ namespace BusBookingSystem.Controllers
             {
                 return HttpNotFound();
             }
-            return View(trip);
+            TripBus tripBus = new TripBus { Trip = trip };
+            return View(tripBus);
         }
 
         //This function starts the adding functionality of trips to database.
         [HttpGet]
         public ActionResult Add()
         {
-            return View();
+            var buses = db.Bus.ToList();
+            TripBus tripBus = new TripBus
+            {
+                Buses = buses
+            };
+            return View(tripBus);
         }
 
         //This function adds a new trip to the database.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Add(Trip newTrip)
+        public ActionResult Add(TripBus newTrip)
         {
             if (ModelState.IsValid)
             {
-                db.Trips.Add(newTrip);
+                db.Trips.Add(newTrip.Trip);
                 db.SaveChanges();
-
                 return RedirectToAction("Index");
-                
             }
-            else
-            {
-                return View(newTrip);
-            }
+
+            return View(newTrip);
         }
 
         //This fuction starts the editing functionality by retrieving the data of the chosen trip from the database and filling the appropriate fields with the corresponding data.
@@ -86,30 +92,38 @@ namespace BusBookingSystem.Controllers
         public ActionResult Edit(int id)
         {
             var tripFromDB = db.Trips.SingleOrDefault(d => d.Id == id);
-
+            var buses = db.Bus.ToList();
+            TripBus tripBus = new TripBus
+            {
+                Trip = tripFromDB,
+                Buses = buses
+            };
             if (tripFromDB == null)
             {
                 return HttpNotFound();
             }
 
-            return View(tripFromDB);
+            return View(tripBus);
         }
 
         //This function edits the trip's information by overwriting the existing data in the database by the new data from the POST request.
         [HttpPost]
-        public ActionResult Edit(Trip trip)
+        public ActionResult Edit(TripBus editTrip)
         {
             if (!ModelState.IsValid)
             {
-                return View("Edit", "trip");
+                var buses = db.Bus.ToList();
+                editTrip.Buses = buses;
+                return View("Edit", "editTrip");
             }
 
-            var tripFromDB = db.Trips.SingleOrDefault(d => d.Id == trip.Id);
-            tripFromDB.date = trip.date;
-            tripFromDB.time = trip.time;
-            tripFromDB.price = trip.price;
-            tripFromDB.tripDestination = trip.tripDestination;
-            tripFromDB.tripStart = trip.tripStart;
+            var tripFromDB = db.Trips.SingleOrDefault(d => d.Id == editTrip.Trip.Id);
+            tripFromDB.date = editTrip.Trip.date;
+            tripFromDB.time = editTrip.Trip.time;
+            tripFromDB.price = editTrip.Trip.price;
+            tripFromDB.tripDestination = editTrip.Trip.tripDestination;
+            tripFromDB.tripStart = editTrip.Trip.tripStart;
+            tripFromDB.licensePlateNo = editTrip.Trip.licensePlateNo;
             db.SaveChanges();
 
             return RedirectToAction("Index", "trip");
