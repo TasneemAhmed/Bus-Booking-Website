@@ -24,6 +24,10 @@ namespace BusBookingSystem.Models
         [Display(Name = "Bus Capacity")]
         [Range(20, 150)]
         public int MBusCapacity { get; set; }
+
+        [Required(ErrorMessage = "you have to enter this image")]
+        [Display(Name = "Bus Image")]
+        public string image { get; set; }
         [Required(ErrorMessage = "this field is required")]
         [Display(Name = "Bus Type")]
         

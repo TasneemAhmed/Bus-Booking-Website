@@ -10,52 +10,57 @@
 
 
 
-<div class="container-fluid" style="width:50% ; margin-top:2%">
-    <table class="table table-responsive">
 
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Bus.MLicensePlateNo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Bus.Did)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Bus.MBusCapacity)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Bus.MBusType)
-            </th>
+<div class="dl-horizontal">
+    <h4>Bus</h4>
+    <hr />
+    <dl>
+        <dt>
+            @Html.DisplayNameFor(model=> model.Bus.image)
+        </dt>
 
+        <dd>
+            <img src="~/Uploads/@Html.DisplayFor(modelItem=>modelItem.Bus.image)"
+                 class="thumbnail"
+                 style="width:500px; height:500px;" />
+        </dd>
 
-        </tr>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bus.MLicensePlateNo)
+        </dt>
 
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => modelItem.Bus.MLicensePlateNo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => modelItem.Bus.Did)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => modelItem.Bus.MBusCapacity)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => modelItem.Bus.MBusType)
-            </td>
+        <dd>
+            @Html.DisplayFor(modelItem => modelItem.Bus.MLicensePlateNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bus.Did)
+        </dt>
 
+        <dd>
+            @Html.DisplayFor(modelItem => modelItem.Bus.Did)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bus.MBusCapacity)
+        </dt>
 
-            <td>
+        <dd>
+            @Html.DisplayFor(modelItem => modelItem.Bus.MBusCapacity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bus.MBusType)
+        </dt>
 
-
-                <a @Html.ActionLink("Edit", "Edit", new { id = Model.Bus.id })> <i class="glyphicon   glyphicon-edit"></i></a> ||
-
-                <a @Html.ActionLink("Delete", "Delete", new { id = Model.Bus.id })><i class="glyphicon   glyphicon-trash"></i></a>
-
-
-            </td>
-        </tr>
+        <dd>
+            @Html.DisplayFor(modelItem => modelItem.Bus.MBusType)
+        </dd>
 
 
-    </table>
+
+
+    </dl>
 </div>
+<p>
+    <a @Html.ActionLink("Edit", "Edit", new { id = Model.Bus.id })> <i class="glyphicon   glyphicon-edit"></i></a> ||
+
+    <a @Html.ActionLink("Delete", "Delete", new { id = Model.Bus.id }, new { onclick = "return confirm('Are you sure you want to delete this?')" })><i class="glyphicon   glyphicon-trash"></i></a>
+</p>

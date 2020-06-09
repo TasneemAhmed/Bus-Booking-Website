@@ -239,6 +239,10 @@
     <Compile Include="Migrations\202006092115456_Bus and Trip relation update.Designer.cs">
       <DependentUpon>202006092115456_Bus and Trip relation update.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006092206111_Trip module updated.cs" />
+    <Compile Include="Migrations\202006092206111_Trip module updated.Designer.cs">
+      <DependentUpon>202006092206111_Trip module updated.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -461,6 +465,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Uploads\" />
     <Folder Include="Views\Person\" />
   </ItemGroup>
   <ItemGroup>
@@ -521,6 +526,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006092115456_Bus and Trip relation update.resx">
       <DependentUpon>202006092115456_Bus and Trip relation update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006092206111_Trip module updated.resx">
+      <DependentUpon>202006092206111_Trip module updated.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
