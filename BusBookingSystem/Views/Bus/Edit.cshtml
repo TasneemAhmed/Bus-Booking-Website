@@ -6,9 +6,17 @@
 
 
 <h2>Edit Information</h2>
-@using (Html.BeginForm())
+@using (Html.BeginForm("Edit", "Bus", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
-    @Html.HiddenFor(c => c.Bus.id)
+
+
+    @Html.HiddenFor(B => B.Bus.id)
+    <div class="form-group">
+
+        @Html.LabelFor(B=> B.Bus.image)
+            <input type="file" name="Upload"  />
+    </div>
+
     <div class="form-group">
         @Html.LabelFor(B => B.Bus.MLicensePlateNo)
         @Html.TextBoxFor(B => B.Bus.MLicensePlateNo, new { @class = "form-control" })

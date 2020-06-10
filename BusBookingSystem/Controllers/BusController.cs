@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -35,23 +37,21 @@ namespace BusBookingSystem.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult New(BusDriver Buses)
+        public ActionResult New(BusDriver Buses, HttpPostedFileBase Upload)
         {
-
-            if (!ModelState.IsValid)
+            if (Upload != null)
             {
-
-                return View(Buses);
-
+                string path = Path.Combine(Server.MapPath("~/Uploads"), Upload.FileName);
+                Upload.SaveAs(path);
+                Buses.Bus.image = Upload.FileName;
             }
-            else
-            {
 
-                db.Bus.Add(Buses.Bus);
+
+            db.Bus.Add(Buses.Bus);
                 db.SaveChanges();
 
                 return RedirectToAction("Index");
-            }
+            
 
 
         }
@@ -70,13 +70,9 @@ namespace BusBookingSystem.Controllers
         }
         [ValidateAntiForgeryToken]
         [HttpPost]
-        public ActionResult Edit(BusDriver BD)
+        public ActionResult Edit(BusDriver BD, HttpPostedFileBase Upload)
         {
-            if (!ModelState.IsValid)
-            {
-
-                return View("Edit", BD);
-            }
+           
 
 
             var Dbus = db.Bus.Single(B => B.id == BD.Bus.id);
@@ -85,6 +81,14 @@ namespace BusBookingSystem.Controllers
             Dbus.MBusType = BD.Bus.MBusType;
             Dbus.MLicensePlateNo = BD.Bus.MLicensePlateNo;
             Dbus.Did = BD.Bus.Did;
+            if (Upload != null)
+            {
+                string path = Path.Combine(Server.MapPath("~/Uploads"), Upload.FileName);
+                Upload.SaveAs(path);
+                Dbus.image = Upload.FileName;
+
+            }
+            db.Entry(Dbus).State = EntityState.Modified;
             db.SaveChanges();
 
 

@@ -19,10 +19,13 @@
 
 
 
-<div class="container-fluid" style="width:50% ; margin-top:2%">
+<div class="container-fluid" style="width:60% ; margin-top:2%">
     <table class="table table-responsive">
 
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Bus.image)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Bus.MLicensePlateNo)
             </th>
@@ -34,25 +37,31 @@
 
         @foreach (var item in Model.Buses)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.MLicensePlateNo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Did)
-                </td>
+    <tr>
+        <td>
+            <img src="~/Uploads/@Html.DisplayFor(modelItem => item.image)"
+                 class="thumbnail"
+                 style="width:100px; height:100px;" />
+
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MLicensePlateNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Did)
+        </td>
 
 
-                <td>
+        <td>
 
 
-                    <a @Html.ActionLink("Edit", "Edit", new { id = item.id })> <i class="glyphicon   glyphicon-edit"></i></a> ||
-                    <a @Html.ActionLink("Details", "Details", new { id = item.id })> <i class="glyphicon glyphicon-list"></i> </a> ||
-                    <a @Html.ActionLink("Delete", "Delete", new { id = item.id } , new {onclick= "return confirm('Are you sure you want to delete this?')" })><i class="glyphicon   glyphicon-trash"></i></a>
+            <a @Html.ActionLink("Edit", "Edit", new { id = item.id })> <i class="glyphicon   glyphicon-edit"></i></a> ||
+            <a @Html.ActionLink("Details", "Details", new { id = item.id })> <i class="glyphicon glyphicon-list"></i> </a> ||
+            <a @Html.ActionLink("Delete", "Delete", new { id = item.id }, new { onclick = "return confirm('Are you sure you want to delete this?')" })><i class="glyphicon   glyphicon-trash"></i></a>
 
 
-                </td>
-            </tr>
+        </td>
+    </tr>
         }
 
     </table>
