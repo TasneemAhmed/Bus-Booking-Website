@@ -46,10 +46,16 @@ namespace BusBookingSystem.Controllers
                 Buses.Bus.image = Upload.FileName;
             }
 
-
-            db.Bus.Add(Buses.Bus);
+            try
+            {
+                db.Bus.Add(Buses.Bus);
                 db.SaveChanges();
-
+            }
+            catch (Exception e)
+            {
+                ViewBag.Message = "There is an error!! Maybe the driver id is wrong";
+                return View(Buses);
+            }
                 return RedirectToAction("Index");
             
 
@@ -88,10 +94,16 @@ namespace BusBookingSystem.Controllers
                 Dbus.image = Upload.FileName;
 
             }
-            db.Entry(Dbus).State = EntityState.Modified;
-            db.SaveChanges();
-
-
+            try
+            {
+                db.Entry(Dbus).State = EntityState.Modified;
+                db.SaveChanges();
+            }
+            catch(Exception e)
+            {
+                ViewBag.Message = "There is Antlr error !! Maybe the driver id is wrong ";
+                return View("Edit ", BD);
+            }
 
             return RedirectToAction("Index");
         }

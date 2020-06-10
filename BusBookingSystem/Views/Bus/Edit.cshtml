@@ -13,8 +13,8 @@
     @Html.HiddenFor(B => B.Bus.id)
     <div class="form-group">
 
-        @Html.LabelFor(B=> B.Bus.image)
-            <input type="file" name="Upload"  />
+        @Html.LabelFor(B => B.Bus.image)
+        <input type="file" name="Upload" />
     </div>
 
     <div class="form-group">
@@ -45,6 +45,6 @@
 
     @Html.AntiForgeryToken()
     <button type="submit" class="btn btn-primary">Save Edited Information</button>
-
+    <span style="color:darkblue">@ViewBag.Message</span>
 
 }
