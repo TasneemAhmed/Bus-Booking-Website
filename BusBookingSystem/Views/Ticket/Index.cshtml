@@ -1,0 +1,50 @@
+﻿@model IEnumerable<BusBookingSystem.Models.Trip>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>All Trips</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tripStart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tripDestination)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date)
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tripStart)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tripDestination)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date)
+        </td>
+        <td>
+            
+            @Html.ActionLink("Go To Booking >>", "Booking", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

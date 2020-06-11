@@ -170,11 +170,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\RoleController.cs" />
+    <Compile Include="Controllers\TicketController.cs" />
     <Compile Include="Controllers\BusController.cs" />
     <Compile Include="Controllers\DriverController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Controllers\TripController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
@@ -252,16 +253,21 @@
     <Compile Include="Migrations\202006101758028_role.Designer.cs">
       <DependentUpon>202006101758028_role.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006110550123_AddTicketModel.cs" />
+    <Compile Include="Migrations\202006110550123_AddTicketModel.Designer.cs">
+      <DependentUpon>202006110550123_AddTicketModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\RoleViewModel.cs" />
+    <Compile Include="Models\Ticket.cs" />
     <Compile Include="Models\Bus.cs" />
     <Compile Include="Models\Driver.cs" />
     <Compile Include="Models\Feedback.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Person.cs" />
-    <Compile Include="Models\RoleViewModel.cs" />
     <Compile Include="Models\Trip.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -402,6 +408,12 @@
     <Content Include="Views\Bus\Details.cshtml" />
     <Content Include="Views\Bus\SearchBus.cshtml" />
     <Content Include="Views\Bus\search box\images\Thumbs.db" />
+    <Content Include="Views\Role\Create.cshtml" />
+    <Content Include="Views\Role\Delete.cshtml" />
+    <Content Include="Views\Role\Details.cshtml" />
+    <Content Include="Views\Role\Edit.cshtml" />
+    <Content Include="Views\Role\Index.cshtml" />
+    <Content Include="Views\Ticket\Booking.cshtml" />
     <None Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\js\bars.js" />
     <Content Include="Views\Home\js\bootstrap.js" />
@@ -472,11 +484,8 @@
     <Content Include="Views\Trip\Details.cshtml" />
     <Content Include="Views\Trip\Edit.cshtml" />
     <Content Include="Views\Trip\Index.cshtml" />
-    <Content Include="Views\Role\Index.cshtml" />
-    <Content Include="Views\Role\Details.cshtml" />
-    <Content Include="Views\Role\Edit.cshtml" />
-    <Content Include="Views\Role\Delete.cshtml" />
-    <Content Include="Views\Role\Create.cshtml" />
+    <Content Include="Views\Ticket\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -550,6 +559,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006101758028_role.resx">
       <DependentUpon>202006101758028_role.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006110550123_AddTicketModel.resx">
+      <DependentUpon>202006110550123_AddTicketModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
