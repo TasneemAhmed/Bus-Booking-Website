@@ -15,6 +15,7 @@ namespace BusBookingSystem.Controllers
 
         /*This function shows a list of all saved trips in the database and shows it on the home screen of
          * maintaining the trips, it also works as a search function with different search filters*/
+        [Authorize(Roles = "Admin")]
         public ActionResult Index(string searchBy, string search)
         {
             if (searchBy == "Start")
@@ -42,6 +43,7 @@ namespace BusBookingSystem.Controllers
         }
 
         //This function retrieve the data of the trip from the database.
+        [Authorize(Roles = "Admin")]
         public IEnumerable<Trip> getTrips()
         {
             var trips = db.Trips.ToList();
@@ -49,6 +51,7 @@ namespace BusBookingSystem.Controllers
         }
 
         //This function shows the details of the trip after retrieving the data from the database.
+        [Authorize(Roles = "Admin")]
         public ActionResult Details(int id)
         {
             var trip = getTrips().SingleOrDefault(c => c.Id == id);
@@ -62,6 +65,7 @@ namespace BusBookingSystem.Controllers
 
         //This function starts the adding functionality of trips to database.
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public ActionResult Add()
         {
             var buses = db.Bus.ToList();
@@ -75,6 +79,7 @@ namespace BusBookingSystem.Controllers
         //This function adds a new trip to the database.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult Add(TripBus newTrip)
         {
             if (ModelState.IsValid)
@@ -89,6 +94,7 @@ namespace BusBookingSystem.Controllers
 
         //This fuction starts the editing functionality by retrieving the data of the chosen trip from the database and filling the appropriate fields with the corresponding data.
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int id)
         {
             var tripFromDB = db.Trips.SingleOrDefault(d => d.Id == id);
@@ -108,6 +114,7 @@ namespace BusBookingSystem.Controllers
 
         //This function edits the trip's information by overwriting the existing data in the database by the new data from the POST request.
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(TripBus editTrip)
         {
             if (!ModelState.IsValid)
@@ -131,6 +138,7 @@ namespace BusBookingSystem.Controllers
 
         //This function deletes the chosen trip from the database.
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int id)
         {
             var trip = db.Trips.SingleOrDefault(d => d.Id == id);

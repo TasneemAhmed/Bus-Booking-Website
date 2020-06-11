@@ -50,7 +50,7 @@ namespace BusBookingSystem.Models
     {
         [Required]
         [Display(Name = "User Name")]
-        public string UserName { get; set; }
+        public string FullName { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
@@ -61,8 +61,12 @@ namespace BusBookingSystem.Models
         public bool RememberMe { get; set; }
     }
 
+
     public class RegisterViewModel
     {
+        [Required]
+        [Display(Name ="UserName")]
+        public string Fullname { get; set; }
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
@@ -78,6 +82,13 @@ namespace BusBookingSystem.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+        [Required]
+        [Display(Name ="Address")]
+        public string Address { get; set; }
+        [Required]
+        [Display(Name ="PhoneNumber")]
+        public string MobileNumber { get; set; }
+        public string RoleName { get; set; }
     }
 
     public class ResetPasswordViewModel

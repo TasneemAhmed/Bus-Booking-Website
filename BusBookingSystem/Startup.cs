@@ -13,43 +13,44 @@ namespace BusBookingSystem
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
-            //CreateRoles();
-            //CreateUsers();
+            CreateRoles();
+           
         }
-        /*public void CreateUsers()
-        {
-            var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
-            var user = new ApplicationUser();
-            user.Email = "jonjon@gmail.com";
-            user.UserName = "Jonjon";
-            var createdUser = userManager.Create(user, "Jonjon@123");
-            if (createdUser.Succeeded)
-            {
-                userManager.AddToRole(user.Id, "Admin");
-            }
-        }
+       
         public void CreateRoles()
         {
             var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(db));
+            var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
             IdentityRole role;
-            if (!roleManager.RoleExists("Admin"))
+            if (!roleManager.RoleExists("Admins"))
             {
                 role = new IdentityRole();
-                role.Name = "Admin";
+                role.Name = "Admins";
                 roleManager.Create(role);
+                ApplicationUser user = new ApplicationUser();
+                user.Fullname = "User Admin";
+                user.Email = "User_admin@gmail.com";
+                user.Address = "street1234";
+                user.MobileNumber = "1234567";
+                var check = userManager.Create(user, "Asmin@12345");
+                if (check.Succeeded)
+                { userManager.AddToRole(user.Id, "Admins"); }
             }
-            if (!roleManager.RoleExists("User"))
+            if (!roleManager.RoleExists("Users"))
             {
                 role = new IdentityRole();
-                role.Name = "User";
+                role.Name = "Users";
                 roleManager.Create(role);
+                ApplicationUser user = new ApplicationUser();
+                user.Fullname = "User user";
+                user.Email = "User_user@gmail.com";
+                user.Address = "street1234";
+                user.MobileNumber = "1234567";
+                var check = userManager.Create(user, "user@12345");
+                if (check.Succeeded)
+                { userManager.AddToRole(user.Id, "Users"); }
             }
-            if (!roleManager.RoleExists("Driver"))
-            {
-                role = new IdentityRole();
-                role.Name = "Driver";
-                roleManager.Create(role);
-            }
-        }*/
+          
+        }
     }
 }

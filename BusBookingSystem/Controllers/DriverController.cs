@@ -35,14 +35,14 @@ namespace BusBookingSystem.Controllers
             var drivers = getDrivers();
             return View(drivers);
         }
-
+        [Authorize(Roles = "Admin")]
         public IEnumerable<Driver> getDrivers()
         {
             //this var drivers is dbset in db , that get all drivers in db.
             var drivers = db.Drivers.ToList();
             return drivers;
         }
-
+        [Authorize(Roles = "Admin")]
         public ActionResult Details(int id)
         {
 
@@ -64,13 +64,15 @@ namespace BusBookingSystem.Controllers
         It is only useful when you are passing sensitive information to the server.
         sensitive information
         */
-        [HttpGet] //hit by the action link("Add") in Add view.
+        [HttpGet] //hit by the action link("Add") in Add view
+        [Authorize(Roles = "Admin")]
         public ActionResult Add()
         {
             return View();
         }
 
         [HttpPost] //hit when click the button "Create" in the view.
+        [Authorize(Roles = "Admin")]
         public ActionResult Add(Driver createNewDriver) //mvc smart enough to bind this model to form(request) data because form data has pefix Driver
         {
             /* when the request data to the application,
@@ -88,6 +90,7 @@ namespace BusBookingSystem.Controllers
 
         //An Edit link sends HttpGet request to the Edit action method of DriverController with corresponding PersonId in the query string.
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int id) //mvc smart enough to bind this model to form(request) data because form data has pefix Driver
         {
             //http://localhost/driver/edit/{Id
@@ -109,6 +112,7 @@ namespace BusBookingSystem.Controllers
          * The Save button will send a HttpPOST request http://localhost/Student/Edit with the Form data collection.
          */
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(Driver driver) 
         {
             /*The HttpPOST Edit action method in DriverController will finally update the data into the database 
@@ -136,6 +140,7 @@ namespace BusBookingSystem.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int id)
         {
             var driver = db.Drivers.SingleOrDefault(d => d.Id == id);

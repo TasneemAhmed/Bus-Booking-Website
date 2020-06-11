@@ -14,6 +14,7 @@ namespace BusBookingSystem.Controllers
     {
         // GET: Bus
         ApplicationDbContext db = new ApplicationDbContext();
+        [Authorize(Roles ="Admin")]
         public ActionResult Index()
         {
             var Driverid = db.Drivers.ToList();
@@ -29,6 +30,7 @@ namespace BusBookingSystem.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public ActionResult New()
         {
 
@@ -37,6 +39,7 @@ namespace BusBookingSystem.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult New(BusDriver Buses, HttpPostedFileBase Upload)
         {
             if (Upload != null)
@@ -62,6 +65,7 @@ namespace BusBookingSystem.Controllers
 
         }
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int id)
         {
 
@@ -76,6 +80,7 @@ namespace BusBookingSystem.Controllers
         }
         [ValidateAntiForgeryToken]
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(BusDriver BD, HttpPostedFileBase Upload)
         {
            
@@ -109,7 +114,7 @@ namespace BusBookingSystem.Controllers
         }
 
 
-
+        [Authorize(Roles = "Admin")]
         public ActionResult Details(int id)
         {
             BusDriver BD = new BusDriver();
@@ -121,6 +126,7 @@ namespace BusBookingSystem.Controllers
             return View(BD);
         }
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public ActionResult Back()
         {
 
@@ -129,6 +135,7 @@ namespace BusBookingSystem.Controllers
 
             return RedirectToAction("Index");
         }
+        [Authorize(Roles = "Admin")]
         public ActionResult SearchBus(string MLicensePlateNo)
         {
 
@@ -140,6 +147,7 @@ namespace BusBookingSystem.Controllers
 
         }
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int id)
 
         {
